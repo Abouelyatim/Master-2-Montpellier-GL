@@ -1,0 +1,8 @@
+Berkane Ibrahim
+Begoug Mahi
+
+-- TP1:
+https://github.com/Abouelyatim/Predictive_Algorithms_For_Project_Management/blob/master/developers_classification.ipynb
+
+-- TP2:
+https://github.com/Abouelyatim/Bug_Ticket_Classifier/blob/master/tp_classif_tickets.ipynb

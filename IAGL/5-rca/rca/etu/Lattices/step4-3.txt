@@ -1,0 +1,1 @@
+Koperation: step=5 nb.concepts=6 nb.attrib rel.=0

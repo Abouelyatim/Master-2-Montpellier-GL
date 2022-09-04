@@ -1,0 +1,103 @@
+digraph G { 
+	rankdir=BT;
+subgraph Kclass { 
+label="Kclass";
+1 [shape=record,label="{Concept_Kclass_1|exist_hasAttribute(C_Kattribute_10)\nexist_hasAttribute(C_Kattribute_14)\n|}"];
+33 [shape=record,label="{Concept_Kclass_33|exist_hasAttribute(C_Kattribute_11)\nexist_hasAttribute(C_Kattribute_15)\nexist_hasRole(C_Krole_20)\nexist_hasRole(C_Krole_42)\n|}"];
+34 [shape=record,label="{Concept_Kclass_34|exist_hasAttribute(C_Kattribute_12)\nexist_hasRole(C_Krole_22)\nexist_hasOperation(C_Koperation_30)\n|}"];
+35 [shape=record,label="{Concept_Kclass_35|exist_hasAttribute(C_Kattribute_13)\nexist_hasOperation(C_Koperation_31)\nexist_hasOperation(C_Koperation_32)\n|}"];
+36 [shape=record,label="{Concept_Kclass_36|exist_hasAttribute(C_Kattribute_16)\nexist_hasRole(C_Krole_25)\n|Enseignant\n}"];
+37 [shape=record,label="{Concept_Kclass_37|exist_hasAttribute(C_Kattribute_17)\nexist_hasAttribute(C_Kattribute_18)\nexist_hasOperation(C_Koperation_28)\n|CompteOffice365\n}"];
+38 [shape=record,label="{Concept_Kclass_38|exist_hasAttribute(C_Kattribute_19)\nexist_hasOperation(C_Koperation_29)\n|CompteOffice365AvecInterts\n}"];
+39 [shape=record,label="{Concept_Kclass_39|exist_hasRole(C_Krole_21)\nexist_hasRole(C_Krole_23)\nexist_hasRole(C_Krole_24)\nexist_hasRole(C_Krole_44)\n|Etudiant\n}"];
+40 [shape=record,label="{Concept_Kclass_40|exist_hasRole(C_Krole_26)\n|Ecole\n}"];
+41 [shape=record,label="{Concept_Kclass_41|exist_hasOperation(C_Koperation_27)\n|}"];
+45 [shape=record,label="{Concept_Kclass_45|exist_hasRole(C_Krole_43)\n|}"];
+	33 -> 1
+	41 -> 1
+	35 -> 33
+	45 -> 33
+	36 -> 35
+	39 -> 35
+	34 -> 36
+	38 -> 37
+	34 -> 38
+	34 -> 39
+	34 -> 40
+	35 -> 41
+	37 -> 41
+	39 -> 45
+	40 -> 45
+}
+subgraph Kattribute { 
+label="Kattribute";
+10 [shape=record,label="{Concept_Kattribute_10||}"];
+11 [shape=record,label="{Concept_Kattribute_11|nom\n|ET::nom\nEN::nom\nEC::nom\n}"];
+12 [shape=record,label="{Concept_Kattribute_12||}"];
+13 [shape=record,label="{Concept_Kattribute_13|prenom\n|ET::prenom\nEN::prenom\n}"];
+14 [shape=record,label="{Concept_Kattribute_14|numero\n|ET::numero\nEN::numero\nEC::numero\nCO::numero\nCOIA::numero\n}"];
+15 [shape=record,label="{Concept_Kattribute_15|adresse\n|ET::adresse\nEN::adresse\nEC::adresse\n}"];
+16 [shape=record,label="{Concept_Kattribute_16|salaire\n|EN::salaire\n}"];
+17 [shape=record,label="{Concept_Kattribute_17|solde\n|CO::solde\nCOIA::solde\n}"];
+18 [shape=record,label="{Concept_Kattribute_18|dateOuverture\n|CO::dateOuverture\nCOIA::dateOuverture\n}"];
+19 [shape=record,label="{Concept_Kattribute_19|taux\n|COIA::taux\n}"];
+	11 -> 10
+	13 -> 10
+	14 -> 10
+	15 -> 10
+	16 -> 10
+	17 -> 10
+	18 -> 10
+	19 -> 10
+	12 -> 11
+	12 -> 13
+	12 -> 14
+	12 -> 15
+	12 -> 16
+	12 -> 17
+	12 -> 18
+	12 -> 19
+}
+subgraph Krole { 
+label="Krole";
+20 [shape=record,label="{Concept_Krole_20|exist_hasTypeEnd(C_Kclass_1)\nexist_hasTypeEnd(C_Kclass_41)\n|}"];
+21 [shape=record,label="{Concept_Krole_21|enseigner\n|ET::enseigner\n}"];
+22 [shape=record,label="{Concept_Krole_22|exist_hasTypeEnd(C_Kclass_34)\nexist_hasTypeEnd(C_Kclass_40)\n|}"];
+23 [shape=record,label="{Concept_Krole_23|compteOffice365\n|ET::compteOffice365\n}"];
+24 [shape=record,label="{Concept_Krole_24|compteOffice365AvecInterts\nexist_hasTypeEnd(C_Kclass_38)\n|ET::compteOffice365AvecInterts\n}"];
+25 [shape=record,label="{Concept_Krole_25|etudiants\nexist_hasTypeEnd(C_Kclass_39)\nexist_hasTypeEnd(C_Kclass_45)\n|EN::etudiants\n}"];
+26 [shape=record,label="{Concept_Krole_26|enseignants\n|EC::enseignants\n}"];
+42 [shape=record,label="{Concept_Krole_42|exist_hasTypeEnd(C_Kclass_33)\nexist_hasTypeEnd(C_Kclass_35)\n|}"];
+43 [shape=record,label="{Concept_Krole_43|exist_hasTypeEnd(C_Kclass_36)\n|}"];
+44 [shape=record,label="{Concept_Krole_44|exist_hasTypeEnd(C_Kclass_37)\n|}"];
+	42 -> 20
+	44 -> 20
+	22 -> 21
+	22 -> 23
+	22 -> 24
+	22 -> 25
+	22 -> 26
+	25 -> 42
+	43 -> 42
+	21 -> 43
+	26 -> 43
+	23 -> 44
+	24 -> 44
+}
+subgraph Koperation { 
+label="Koperation";
+27 [shape=record,label="{Concept_Koperation_27||}"];
+28 [shape=record,label="{Concept_Koperation_28|print\nSD\n|CO::print\n}"];
+29 [shape=record,label="{Concept_Koperation_29|SDT\n|COIA::print\n}"];
+30 [shape=record,label="{Concept_Koperation_30||}"];
+31 [shape=record,label="{Concept_Koperation_31|effectuerQuiz\n|ET::effectuerQuiz\nEN::effectuerQuiz\n}"];
+32 [shape=record,label="{Concept_Koperation_32|repondreAuxQuestions\n|ET::repondreAuxQuestions\nEN::repondreAuxQuestions\n}"];
+	28 -> 27
+	31 -> 27
+	32 -> 27
+	29 -> 28
+	30 -> 29
+	30 -> 31
+	30 -> 32
+}
+}

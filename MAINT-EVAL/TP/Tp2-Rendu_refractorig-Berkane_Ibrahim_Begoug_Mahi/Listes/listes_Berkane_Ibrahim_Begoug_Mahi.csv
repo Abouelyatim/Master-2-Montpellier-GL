@@ -1,0 +1,5 @@
+;public boolean add(Object o);public boolean isEmpty();public Object peek();public Object poll();public Object comparator();public Object get(int i);public static void staticLT()
+QueueAvecPriorite;1;1;1;1;1;0;0
+QueueDoubleEntree;1;1;1;1;0;0;0
+ListeChainee;1;1;1;1;0;1;0
+ListeTableau;1;1;0;0;0;1;1

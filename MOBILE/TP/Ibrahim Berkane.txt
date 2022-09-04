@@ -1,0 +1,12 @@
+Bonjour 
+
+pour le Tp 1 je n'est pas pu envoyer a la date definit
+à cause des contraintes de mon PFE a ESI, 
+et monsieur Abdelhak-Djamel Seriai connaît ces contraintes.
+
+cordialement
+
+Tp1-exo1 : https://github.com/Abouelyatim/MiCard
+Tp1-exo2 : https://github.com/Abouelyatim/QuizApp
+Tp2-exo1 : https://github.com/Abouelyatim/QuizApp_Provider
+Tp2-weather : https://github.com/Abouelyatim/WhetherApp

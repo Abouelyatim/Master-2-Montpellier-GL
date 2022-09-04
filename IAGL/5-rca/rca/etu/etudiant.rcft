@@ -1,0 +1,96 @@
+FormalContext Kclass
+|	                    | 
+|Etudiant                   | 
+|Enseignant                 | 
+|Ecole                      | 
+|CompteOffice365            | 
+|CompteOffice365AvecInterts |
+
+FormalContext Kattribute
+|                   |nom|prenom|numero|adresse|salaire|solde|dateOuverture|taux|
+|ET::nom            |x  |      |      |       |       |     |             |    | 
+|ET::prenom         |   |x     |      |       |       |     |             |    | 
+|ET::numero         |   |      |x     |       |       |     |             |    | 
+|ET::adresse        |   |      |      |x      |       |     |             |    | 
+|EN::nom            |x  |      |      |       |       |     |             |    | 
+|EN::prenom         |   |x     |      |       |       |     |             |    | 
+|EN::adresse        |   |      |      |x      |       |     |             |    | 
+|EN::salaire        |   |      |      |       |x      |     |             |    | 
+|EN::numero         |   |      |x     |       |       |     |             |    | 
+|EC::numero         |   |      |x     |       |       |     |             |    | 
+|EC::adresse        |   |      |      |x      |       |     |             |    | 
+|EC::nom            |x  |      |      |       |       |     |             |    |
+|CO::numero         |   |      |x     |       |       |     |             |    |
+|CO::solde          |   |      |      |       |       |x    |             |    |
+|CO::dateOuverture  |   |      |      |       |       |     |x            |    |
+|COIA::numero       |   |      |x     |       |       |     |             |    |
+|COIA::solde        |   |      |      |       |       |x    |             |    |
+|COIA::dateOuverture|   |      |      |       |       |     |x            |    |
+|COIA::taux         |   |      |      |       |       |     |             |x   |
+
+
+FormalContext Krole
+|                              |enseigner|compteOffice365|compteOffice365AvecInterts|etudiants|enseignants|
+|ET::enseigner                 |x        |               |                          |         |           |
+|ET::compteOffice365           |         |x              |                          |         |           | 
+|ET::compteOffice365AvecInterts|         |               |x                         |         |           |
+|EN::etudiants                 |         |               |                          |x        |           |
+|EC::enseignants               |         |               |                          |         |x          |
+
+
+
+FormalContext Koperation
+|           		 |print|SD|SDT|effectuerQuiz|repondreAuxQuestions|
+|CO::print  		 |x    |x |   |             | 	                 |
+|COIA::print             |x    |x | x | 	    |		         |
+|ET::effectuerQuiz	 |     |  |   |x	    |		         |
+|ET::repondreAuxQuestions|     |  |   |	            |x		         |
+|EN::effectuerQuiz	 |     |  |   |x	    |		         |
+|EN::repondreAuxQuestions|     |  |   |		    |x		         |
+       
+
+RelationalContext hasAttribute
+source Kclass
+target Kattribute
+scaling org.rcaexplore.scaling.ExistentialScaling
+|	                   |ET::nom|ET::prenom|ET::numero|ET::adresse|EN::nom|EN::prenom|EN::adresse|EN::salaire|EN::numero|EC::numero|EC::nom|EC::adresse|CO::numero|CO::solde|CO::dateOuverture|COIA::numero|COIA::solde|COIA::dateOuverture|COIA::taux|
+|Etudiant                  |x      |x         |x         |x          |       |          |           |           |          |          |	      |           |          |         |                 |            |           |                   |          |
+|Enseignant                |       |          |          |           |x      |x         |x	    |x          |x         |          |       |           |          |         |                 | 	      |           |                   |          |  
+|Ecole                     |       |          |          |           |       |          |           |           |          |x         |x      |x          |          |         |                 |            |           |                   |          |
+|CompteOffice365           |       |          |          |           |       |          |           |           |          |          |       |           |x         |x        |x                |            |           |                   |          |
+|CompteOffice365AvecInterts|       |          |          |           |       |          |           |           |          | 	      |       |           |          |         |                 |x           |x          |x                  |x         |
+
+RelationalContext hasRole
+source Kclass
+target Krole
+scaling org.rcaexplore.scaling.ExistentialScaling
+|                          |ET::enseigner|ET::compteOffice365|ET::compteOffice365AvecInterts|EN::etudiants|EC::enseignants|
+|Etudiant                  |x            |x		     |x				    | 		  |		  |
+|Enseignant                |             | 		     | 				    |x		  |		  |
+|Ecole                     |             | 		     | 				    | 		  |x		  |
+|CompteOffice365           |             | 		     | 				    |		  |		  |
+|CompteOffice365AvecInterts|             | 		     | 				    |		  |		  |
+
+
+RelationalContext hasOperation
+source Kclass
+target Koperation
+scaling org.rcaexplore.scaling.ExistentialScaling
+|	                   |CO::print|COIA::print|ET::effectuerQuiz|ET::repondreAuxQuestions|EN::effectuerQuiz|EN::repondreAuxQuestions|
+|Etudiant                  | 	     |           |x                |x                       |                 |                        |
+|Enseignant                |         |           |                 |                        |x                |x                       |
+|Ecole                     |         |           |                 | 			    |                 |                        |
+|CompteOffice365           |x        |           |                 |                        |                 |                        |
+|CompteOffice365AvecInterts|         |x          |		   |                        |                 |                        |
+
+RelationalContext hasTypeEnd 
+source Krole
+target Kclass
+scaling org.rcaexplore.scaling.ExistentialScaling
+|                              |Etudiant|Enseignant|Ecole|CompteOffice365|CompteOffice365AvecInterts|
+|ET::enseigner                 |        |x         |     |               |                          |
+|ET::compteOffice365           |        |          |     | x             |                          |
+|ET::compteOffice365AvecInterts|        |          |     |               |x                         |
+|EN::etudiants                 |x       |          |     |               |                          |
+|EC::enseignants               |        |x         |     |               |                          |
+

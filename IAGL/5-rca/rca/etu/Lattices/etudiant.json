@@ -1,0 +1,786 @@
+[
+{
+"attributes": {
+"exist_hasAttribute": {
+"concepts": [
+10,
+14
+],
+"operator": "exist",
+"relation": "hasAttribute",
+"target": "Kattribute"
+}
+},
+"children": [
+33,
+41
+],
+"context": "Kclass",
+"id": 1,
+"objects": [],
+"parents": []
+},
+{
+"attributes": {
+"exist_hasAttribute": {
+"concepts": [
+11,
+15
+],
+"operator": "exist",
+"relation": "hasAttribute",
+"target": "Kattribute"
+},
+"exist_hasRole": {
+"concepts": [
+20,
+42
+],
+"operator": "exist",
+"relation": "hasRole",
+"target": "Krole"
+}
+},
+"children": [
+35,
+45
+],
+"context": "Kclass",
+"id": 33,
+"objects": [],
+"parents": [
+1
+]
+},
+{
+"attributes": {
+"exist_hasOperation": {
+"concepts": [
+27
+],
+"operator": "exist",
+"relation": "hasOperation",
+"target": "Koperation"
+}
+},
+"children": [
+35,
+37
+],
+"context": "Kclass",
+"id": 41,
+"objects": [],
+"parents": [
+1
+]
+},
+{
+"attributes": {
+"exist_hasRole": {
+"concepts": [
+43
+],
+"operator": "exist",
+"relation": "hasRole",
+"target": "Krole"
+}
+},
+"children": [
+39,
+40
+],
+"context": "Kclass",
+"id": 45,
+"objects": [],
+"parents": [
+33
+]
+},
+{
+"attributes": {
+"exist_hasAttribute": {
+"concepts": [
+13
+],
+"operator": "exist",
+"relation": "hasAttribute",
+"target": "Kattribute"
+},
+"exist_hasOperation": {
+"concepts": [
+31,
+32
+],
+"operator": "exist",
+"relation": "hasOperation",
+"target": "Koperation"
+}
+},
+"children": [
+36,
+39
+],
+"context": "Kclass",
+"id": 35,
+"objects": [],
+"parents": [
+33,
+41
+]
+},
+{
+"attributes": {
+"exist_hasAttribute": {
+"concepts": [
+17,
+18
+],
+"operator": "exist",
+"relation": "hasAttribute",
+"target": "Kattribute"
+},
+"exist_hasOperation": {
+"concepts": [
+28
+],
+"operator": "exist",
+"relation": "hasOperation",
+"target": "Koperation"
+}
+},
+"children": [
+38
+],
+"context": "Kclass",
+"id": 37,
+"objects": [
+"CompteOffice365"
+],
+"parents": [
+41
+]
+},
+{
+"attributes": {
+"exist_hasRole": {
+"concepts": [
+26
+],
+"operator": "exist",
+"relation": "hasRole",
+"target": "Krole"
+}
+},
+"children": [
+34
+],
+"context": "Kclass",
+"id": 40,
+"objects": [
+"Ecole"
+],
+"parents": [
+45
+]
+},
+{
+"attributes": {
+"exist_hasRole": {
+"concepts": [
+21,
+23,
+24,
+44
+],
+"operator": "exist",
+"relation": "hasRole",
+"target": "Krole"
+}
+},
+"children": [
+34
+],
+"context": "Kclass",
+"id": 39,
+"objects": [
+"Etudiant"
+],
+"parents": [
+35,
+45
+]
+},
+{
+"attributes": {
+"exist_hasAttribute": {
+"concepts": [
+19
+],
+"operator": "exist",
+"relation": "hasAttribute",
+"target": "Kattribute"
+},
+"exist_hasOperation": {
+"concepts": [
+29
+],
+"operator": "exist",
+"relation": "hasOperation",
+"target": "Koperation"
+}
+},
+"children": [
+34
+],
+"context": "Kclass",
+"id": 38,
+"objects": [
+"CompteOffice365AvecInterts"
+],
+"parents": [
+37
+]
+},
+{
+"attributes": {
+"exist_hasAttribute": {
+"concepts": [
+16
+],
+"operator": "exist",
+"relation": "hasAttribute",
+"target": "Kattribute"
+},
+"exist_hasRole": {
+"concepts": [
+25
+],
+"operator": "exist",
+"relation": "hasRole",
+"target": "Krole"
+}
+},
+"children": [
+34
+],
+"context": "Kclass",
+"id": 36,
+"objects": [
+"Enseignant"
+],
+"parents": [
+35
+]
+},
+{
+"attributes": {
+"exist_hasAttribute": {
+"concepts": [
+12
+],
+"operator": "exist",
+"relation": "hasAttribute",
+"target": "Kattribute"
+},
+"exist_hasOperation": {
+"concepts": [
+30
+],
+"operator": "exist",
+"relation": "hasOperation",
+"target": "Koperation"
+},
+"exist_hasRole": {
+"concepts": [
+22
+],
+"operator": "exist",
+"relation": "hasRole",
+"target": "Krole"
+}
+},
+"children": [],
+"context": "Kclass",
+"id": 34,
+"objects": [],
+"parents": [
+36,
+38,
+39,
+40
+]
+},
+{
+"attributes": {},
+"children": [
+11,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+],
+"context": "Kattribute",
+"id": 10,
+"objects": [],
+"parents": []
+},
+{
+"attributes": {
+"taux": "taux"
+},
+"children": [
+12
+],
+"context": "Kattribute",
+"id": 19,
+"objects": [
+"COIA::taux"
+],
+"parents": [
+10
+]
+},
+{
+"attributes": {
+"dateOuverture": "dateOuverture"
+},
+"children": [
+12
+],
+"context": "Kattribute",
+"id": 18,
+"objects": [
+"CO::dateOuverture",
+"COIA::dateOuverture"
+],
+"parents": [
+10
+]
+},
+{
+"attributes": {
+"solde": "solde"
+},
+"children": [
+12
+],
+"context": "Kattribute",
+"id": 17,
+"objects": [
+"CO::solde",
+"COIA::solde"
+],
+"parents": [
+10
+]
+},
+{
+"attributes": {
+"salaire": "salaire"
+},
+"children": [
+12
+],
+"context": "Kattribute",
+"id": 16,
+"objects": [
+"EN::salaire"
+],
+"parents": [
+10
+]
+},
+{
+"attributes": {
+"adresse": "adresse"
+},
+"children": [
+12
+],
+"context": "Kattribute",
+"id": 15,
+"objects": [
+"ET::adresse",
+"EN::adresse",
+"EC::adresse"
+],
+"parents": [
+10
+]
+},
+{
+"attributes": {
+"numero": "numero"
+},
+"children": [
+12
+],
+"context": "Kattribute",
+"id": 14,
+"objects": [
+"ET::numero",
+"EN::numero",
+"EC::numero",
+"CO::numero",
+"COIA::numero"
+],
+"parents": [
+10
+]
+},
+{
+"attributes": {
+"prenom": "prenom"
+},
+"children": [
+12
+],
+"context": "Kattribute",
+"id": 13,
+"objects": [
+"ET::prenom",
+"EN::prenom"
+],
+"parents": [
+10
+]
+},
+{
+"attributes": {
+"nom": "nom"
+},
+"children": [
+12
+],
+"context": "Kattribute",
+"id": 11,
+"objects": [
+"ET::nom",
+"EN::nom",
+"EC::nom"
+],
+"parents": [
+10
+]
+},
+{
+"attributes": {},
+"children": [],
+"context": "Kattribute",
+"id": 12,
+"objects": [],
+"parents": [
+11,
+13,
+14,
+15,
+16,
+17,
+18,
+19
+]
+},
+{
+"attributes": {
+"exist_hasTypeEnd": {
+"concepts": [
+1,
+41
+],
+"operator": "exist",
+"relation": "hasTypeEnd",
+"target": "Kclass"
+}
+},
+"children": [
+42,
+44
+],
+"context": "Krole",
+"id": 20,
+"objects": [],
+"parents": []
+},
+{
+"attributes": {
+"exist_hasTypeEnd": {
+"concepts": [
+33,
+35
+],
+"operator": "exist",
+"relation": "hasTypeEnd",
+"target": "Kclass"
+}
+},
+"children": [
+25,
+43
+],
+"context": "Krole",
+"id": 42,
+"objects": [],
+"parents": [
+20
+]
+},
+{
+"attributes": {
+"exist_hasTypeEnd": {
+"concepts": [
+36
+],
+"operator": "exist",
+"relation": "hasTypeEnd",
+"target": "Kclass"
+}
+},
+"children": [
+21,
+26
+],
+"context": "Krole",
+"id": 43,
+"objects": [],
+"parents": [
+42
+]
+},
+{
+"attributes": {
+"exist_hasTypeEnd": {
+"concepts": [
+37
+],
+"operator": "exist",
+"relation": "hasTypeEnd",
+"target": "Kclass"
+}
+},
+"children": [
+23,
+24
+],
+"context": "Krole",
+"id": 44,
+"objects": [],
+"parents": [
+20
+]
+},
+{
+"attributes": {
+"enseignants": "enseignants"
+},
+"children": [
+22
+],
+"context": "Krole",
+"id": 26,
+"objects": [
+"EC::enseignants"
+],
+"parents": [
+43
+]
+},
+{
+"attributes": {
+"etudiants": "etudiants",
+"exist_hasTypeEnd": {
+"concepts": [
+39,
+45
+],
+"operator": "exist",
+"relation": "hasTypeEnd",
+"target": "Kclass"
+}
+},
+"children": [
+22
+],
+"context": "Krole",
+"id": 25,
+"objects": [
+"EN::etudiants"
+],
+"parents": [
+42
+]
+},
+{
+"attributes": {
+"compteOffice365AvecInterts": "compteOffice365AvecInterts",
+"exist_hasTypeEnd": {
+"concepts": [
+38
+],
+"operator": "exist",
+"relation": "hasTypeEnd",
+"target": "Kclass"
+}
+},
+"children": [
+22
+],
+"context": "Krole",
+"id": 24,
+"objects": [
+"ET::compteOffice365AvecInterts"
+],
+"parents": [
+44
+]
+},
+{
+"attributes": {
+"compteOffice365": "compteOffice365"
+},
+"children": [
+22
+],
+"context": "Krole",
+"id": 23,
+"objects": [
+"ET::compteOffice365"
+],
+"parents": [
+44
+]
+},
+{
+"attributes": {
+"enseigner": "enseigner"
+},
+"children": [
+22
+],
+"context": "Krole",
+"id": 21,
+"objects": [
+"ET::enseigner"
+],
+"parents": [
+43
+]
+},
+{
+"attributes": {
+"exist_hasTypeEnd": {
+"concepts": [
+34,
+40
+],
+"operator": "exist",
+"relation": "hasTypeEnd",
+"target": "Kclass"
+}
+},
+"children": [],
+"context": "Krole",
+"id": 22,
+"objects": [],
+"parents": [
+21,
+23,
+24,
+25,
+26
+]
+},
+{
+"attributes": {},
+"children": [
+28,
+31,
+32
+],
+"context": "Koperation",
+"id": 27,
+"objects": [],
+"parents": []
+},
+{
+"attributes": {
+"SD": "SD",
+"print": "print"
+},
+"children": [
+29
+],
+"context": "Koperation",
+"id": 28,
+"objects": [
+"CO::print"
+],
+"parents": [
+27
+]
+},
+{
+"attributes": {
+"repondreAuxQuestions": "repondreAuxQuestions"
+},
+"children": [
+30
+],
+"context": "Koperation",
+"id": 32,
+"objects": [
+"ET::repondreAuxQuestions",
+"EN::repondreAuxQuestions"
+],
+"parents": [
+27
+]
+},
+{
+"attributes": {
+"effectuerQuiz": "effectuerQuiz"
+},
+"children": [
+30
+],
+"context": "Koperation",
+"id": 31,
+"objects": [
+"ET::effectuerQuiz",
+"EN::effectuerQuiz"
+],
+"parents": [
+27
+]
+},
+{
+"attributes": {
+"SDT": "SDT"
+},
+"children": [
+30
+],
+"context": "Koperation",
+"id": 29,
+"objects": [
+"COIA::print"
+],
+"parents": [
+28
+]
+},
+{
+"attributes": {},
+"children": [],
+"context": "Koperation",
+"id": 30,
+"objects": [],
+"parents": [
+29,
+31,
+32
+]
+}
+]
